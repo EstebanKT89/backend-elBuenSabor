@@ -1,0 +1,17 @@
+package com.labIv.backend_elBuenSabor.controllers;
+
+import com.labIv.backend_elBuenSabor.entities.ImagenArticulo;
+import com.labIv.backend_elBuenSabor.services.impl.ImagenArticuloServiceImpl;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping(path= "/api/imagenesArticulos")
+public class ImagenArticuloController extends GenericControllerImpl<ImagenArticulo, ImagenArticuloServiceImpl> {
+
+    public ImagenArticuloController(ImagenArticuloServiceImpl servicio) {
+        super(servicio);
+    }
+}
